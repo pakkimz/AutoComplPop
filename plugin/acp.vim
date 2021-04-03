@@ -31,9 +31,6 @@ function s:makeDefaultBehavior()
         \   'ruby'   : [],
         \   'python' : [],
         \   'perl'   : [],
-        \   'xml'    : [],
-        \   'html'   : [],
-        \   'xhtml'  : [],
         \   'css'    : [],
         \ }
   "---------------------------------------------------------------------------
@@ -93,24 +90,6 @@ function s:makeDefaultBehavior()
         \   'repeat'  : 0,
         \ })
   "---------------------------------------------------------------------------
-  call add(behavs.xml, {
-        \   'command' : "\<C-x>\<C-o>",
-        \   'meets'   : 'acp#meetsForXmlOmni',
-        \   'repeat'  : 1,
-        \ })
-  "---------------------------------------------------------------------------
-  call add(behavs.html, {
-        \   'command' : "\<C-x>\<C-o>",
-        \   'meets'   : 'acp#meetsForHtmlOmni',
-        \   'repeat'  : 1,
-        \ })
-  "---------------------------------------------------------------------------
-  call add(behavs.xhtml, {
-        \   'command' : "\<C-x>\<C-o>",
-        \   'meets'   : 'acp#meetsForHtmlOmni',
-        \   'repeat'  : 1,
-        \ })
-  "---------------------------------------------------------------------------
   call add(behavs.css, {
         \   'command' : "\<C-x>\<C-o>",
         \   'meets'   : 'acp#meetsForCssOmni',
@@ -141,8 +120,6 @@ call s:defineOption('g:acp_behaviorRubyOmniMethodLength', 0)
 call s:defineOption('g:acp_behaviorRubyOmniSymbolLength', 1)
 call s:defineOption('g:acp_behaviorPythonOmniLength', 0)
 call s:defineOption('g:acp_behaviorPerlOmniLength', -1)
-call s:defineOption('g:acp_behaviorXmlOmniLength', 0)
-call s:defineOption('g:acp_behaviorHtmlOmniLength', 0)
 call s:defineOption('g:acp_behaviorCssOmniPropertyLength', 1)
 call s:defineOption('g:acp_behaviorCssOmniValueLength', 0)
 call s:defineOption('g:acp_behavior', {})
