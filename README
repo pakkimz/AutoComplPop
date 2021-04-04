@@ -7,7 +7,6 @@ With this plugin, your vim comes to automatically opens popup menu for
 completions when you enter characters or move the cursor in Insert mode. It
 won't prevent you continuing entering characters.
 
-
 ==============================================================================
 INSTALLATION                                                *acp-installation*
 
@@ -27,7 +26,6 @@ directory, put the files into new directory and just add the directory path to
 And then update your help tags files to enable fuzzyfinder help. See
 |add-local-help| for details.
 
-
 ==============================================================================
 USAGE                                                              *acp-usage*
 
@@ -38,7 +36,7 @@ default behavior is as follows:
 
         kind      filetype    text before the cursor ~
         Keyword   *           two keyword characters
-        Filename  *           a filename character + a path separator 
+        Filename  *           a filename character + a path separator
                               + 0 or more filename character
         Omni      ruby        ".", "::" or non-word character + ":"
                               (|+ruby| required.)
@@ -59,7 +57,6 @@ snipMate's Trigger Completion ~
 snipMate's trigger completion enables you to complete a snippet trigger
 provided by snipMate plugin
 (http://www.vim.org/scripts/script.php?script_id=2540) and expand it.
-
 
 To enable auto-popup for this completion, add following function to
 plugin/snipMate.vim:
@@ -87,6 +84,12 @@ AutoComplPop supports perl-completion.vim
 To enable auto-popup for this completion, set |g:acp_behaviorPerlOmniLength|
 option to 0 or more.
 
-
 ==============================================================================
 
+This a copy from https://github.com/andykog/AutoComplPop
+- disable dictionary:
+call s:defineOption('g:acp_completeOption', '.,w,b')
+- change keyword command to "\<C-p>":
+call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-p>")
+
+==============================================================================
