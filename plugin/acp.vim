@@ -35,6 +35,7 @@ function s:makeDefaultBehavior()
         \   'xml'        : [],
         \   'php'        : [],
         \   'html'       : [],
+        \   'jst'       : [],
         \   'jade'       : [],
         \   'xhtml'      : [],
         \   'css'        : [],
@@ -119,6 +120,12 @@ function s:makeDefaultBehavior()
         \ })
   "---------------------------------------------------------------------------
   call add(behavs.html, {
+        \   'command' : "\<C-x>\<C-o>",
+        \   'meets'   : 'acp#meetsForHtmlOmni',
+        \   'repeat'  : 1,
+        \ })
+  "---------------------------------------------------------------------------
+  call add(behavs.jst, {
         \   'command' : "\<C-x>\<C-o>",
         \   'meets'   : 'acp#meetsForHtmlOmni',
         \   'repeat'  : 1,

@@ -129,7 +129,7 @@ endfunction
 "
 function acp#meetsForJavascriptOmni(context)
   return g:acp_behaviorJavascriptOmniLength >= 0 &&
-        \ a:context =~ '\([a-z0-9_$]\.\|[\(\[]\)\k\{' . g:acp_behaviorJavascriptOmniLength . ',}$'
+        \ a:context =~ '\k\.\k\{' . g:acp_behaviorJavascriptOmniLength . ',}$'
                        "      symb.  or  ( [
 endfunction
 
@@ -149,7 +149,7 @@ endfunction
 "
 function acp#meetsForPhpOmni(context)
   return g:acp_behaviorPhpOmniLength >= 0 &&
-        \ a:context =~ '\([a-z0-9_$]\)*\k\{' . g:acp_behaviorPhpOmniLength . ',}$'
+        \ a:context =~ '\w->\k\{' . g:acp_behaviorPhpOmniLength . ',}$'
 endfunction
 
 "
