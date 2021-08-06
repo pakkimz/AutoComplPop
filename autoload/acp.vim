@@ -13,7 +13,6 @@ let g:loaded_autoload_acp = 1
 "=============================================================================
 " GLOBAL FUNCTIONS: {{{1
 
-
 "
 function acp#enable()
   call acp#disable()
@@ -268,7 +267,7 @@ function acp#onPopupPost()
           \                                                 : "\<C-p>\<Down>")
   endif
   let s:iBehavs += 1
-  if len(s:behavsCurrent) > s:iBehavs 
+  if len(s:behavsCurrent) > s:iBehavs
     call s:setCompletefunc()
     return printf("\<C-e>%s\<C-r>=acp#onPopupPost()\<CR>",
           \       s:behavsCurrent[s:iBehavs].command)
