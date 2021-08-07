@@ -87,6 +87,10 @@ option to 0 or more.
 ==============================================================================
 
 This a copy from https://github.com/andykog/AutoComplPop
+And phpcomplete from https://github.com/othree/vim-autocomplpop
+
+==============================================================================
+
 - disable dictionary:
 call s:defineOption('g:acp_completeOption', '.,w,b')
 - change keyword command to "\<C-p>":
@@ -94,4 +98,5 @@ call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-p>")
 - change in acp#meetsForJavascriptOmni(context)
 - change in acp#meetsForPhpOmni(context)
 - add jst file
+
 ==============================================================================

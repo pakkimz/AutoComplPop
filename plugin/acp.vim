@@ -35,7 +35,7 @@ function s:makeDefaultBehavior()
         \   'xml'        : [],
         \   'php'        : [],
         \   'html'       : [],
-        \   'jst'       : [],
+        \   'jst'        : [],
         \   'jade'       : [],
         \   'xhtml'      : [],
         \   'css'        : [],
