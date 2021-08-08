@@ -165,7 +165,10 @@ function acp#meetsForPhpOmni(context)
   if a:context =~ '[^.]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
      return 1
   endif
-  return 0
+  if a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
+     \            g:acp_behaviorPhpOmniLength . ',}$'
+     return 1
+  endif
 endfunction
 
 "
