@@ -130,7 +130,7 @@ endfunction
 function acp#meetsForJavascriptOmni(context)
   return g:acp_behaviorJavascriptOmniLength >= 0 &&
         \ a:context =~ '\k\.\k\{' . g:acp_behaviorJavascriptOmniLength . ',}$'
-                       "      symb.  or  ( [
+  "      symb.  or  ( [
 endfunction
 
 "
@@ -155,19 +155,19 @@ function acp#meetsForPhpOmni(context)
     return 0
   endif
   if a:context =~ 'new \k\{' .
-     \            g:acp_behaviorPhpOmniLength . ',}$'
-     return 1
+        \            g:acp_behaviorPhpOmniLength . ',}$'
+    return 1
   endif
   if a:context =~ '\$\{' .
-     \            g:acp_behaviorPhpOmniLength . ',}$'
-     return 1
+        \            g:acp_behaviorPhpOmniLength . ',}$'
+    return 1
   endif
   if a:context =~ '[^.]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
-     return 1
+    return 1
   endif
   if a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
-     \            g:acp_behaviorPhpOmniLength . ',}$'
-     return 1
+        \            g:acp_behaviorPhpOmniLength . ',}$'
+    return 1
   endif
 endfunction
 
@@ -176,12 +176,6 @@ function acp#meetsForHtmlOmni(context)
   return g:acp_behaviorHtmlOmniLength >= 0 &&
         \ a:context =~ '\(<\|<\/\|<[^>]\+ \|<[^>]\+=\"\)\k\{' .
         \              g:acp_behaviorHtmlOmniLength . ',}$'
-endfunction
-
-"
-function acp#meetsForJadeOmni(context)
-  return g:acp_behaviorJadeOmniLength >= 0 &&
-        \ a:context =~ '\([a-z0-9_$]\)*\k\{' . g:acp_behaviorJadeOmniLength . ',}$'
 endfunction
 
 "
@@ -247,7 +241,7 @@ endfunction
 function acp#meetsForHaskellOmni(context)
   return g:acp_behaviorHaskellOmniLength >= 0 &&
         \ a:context =~ '\([a-z0-9_$]\.\|[\(\[]\)\k\{' . g:acp_behaviorHaskellOmniLength . ',}$'
-                       "      symb.  or  ( [
+  "      symb.  or  ( [
 endfunction
 
 "

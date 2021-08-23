@@ -36,7 +36,6 @@ function s:makeDefaultBehavior()
         \   'php'        : [],
         \   'html'       : [],
         \   'jst'        : [],
-        \   'jade'       : [],
         \   'xhtml'      : [],
         \   'css'        : [],
         \   'scss'       : [],
@@ -143,12 +142,6 @@ function s:makeDefaultBehavior()
         \   'repeat'  : 1,
         \ })
   "---------------------------------------------------------------------------
-  call add(behavs.jade, {
-        \   'command' : "\<C-x>\<C-o>",
-        \   'meets'   : 'acp#meetsForJadeOmni',
-        \   'repeat'  : 1,
-        \ })
-  "---------------------------------------------------------------------------
   call add(behavs.css, {
         \   'command' : "\<C-x>\<C-o>",
         \   'meets'   : 'acp#meetsForCssOmni',
@@ -202,7 +195,6 @@ call s:defineOption('g:acp_behaviorPerlOmniLength', -1)
 call s:defineOption('g:acp_behaviorXmlOmniLength', 0)
 call s:defineOption('g:acp_behaviorPhpOmniLength', 1)
 call s:defineOption('g:acp_behaviorHtmlOmniLength', 1)
-call s:defineOption('g:acp_behaviorJadeOmniLength', 1)
 call s:defineOption('g:acp_behaviorCssOmniPropertyLength', 1)
 call s:defineOption('g:acp_behaviorCssOmniValueLength', 0)
 call s:defineOption('g:acp_behavior', {})
