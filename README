@@ -87,6 +87,7 @@ option to 0 or more.
 ==============================================================================
 
 This a copy from https://github.com/andykog/AutoComplPop
+css omni taken from https://github.com/ayang/AutoComplPop/blob/master/autoload/acp.vim
 And phpcomplete from https://github.com/othree/vim-autocomplpop
 
 ==============================================================================
@@ -98,6 +99,5 @@ call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-p>")
 - change in acp#meetsForJavascriptOmni(context)
 - change in acp#meetsForPhpOmni(context)
 - add jst file
-- css omni taken from https://github.com/ayang/AutoComplPop/blob/master/autoload/acp.vim
 
 ==============================================================================
