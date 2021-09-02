@@ -181,7 +181,7 @@ endfunction
 "
 function acp#meetsForCssOmni(context)
   if g:acp_behaviorCssOmniPropertyLength >= 0 &&
-        \ a:context =~ '[^ \t:]\k\{' .
+        \ a:context =~ '\(^\s\|[;{]\)\s*\k\{' .
         \              g:acp_behaviorCssOmniPropertyLength . ',}$'
     return 1
   endif
