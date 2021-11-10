@@ -196,7 +196,7 @@ endfunction
 "
 function acp#meetsForScssOmni(context)
   if g:acp_behaviorCssOmniPropertyLength >= 0 &&
-        \ a:context =~ '[^ \t:]\k\{' .
+        \ a:context =~ '\(^\s\|[;{]\)\s*\k\{' .
         \              g:acp_behaviorCssOmniPropertyLength . ',}$'
     return 1
   endif
@@ -210,7 +210,7 @@ endfunction
 
 function acp#meetsForSassOmni(context)
   if g:acp_behaviorCssOmniPropertyLength >= 0 &&
-        \ a:context =~ '[^ \t:]\k\{' .
+        \ a:context =~ '\(^\s\|[;{]\)\s*\k\{' .
         \              g:acp_behaviorCssOmniPropertyLength . ',}$'
     return 1
   endif
@@ -225,7 +225,7 @@ endfunction
 "
 function acp#meetsForLessOmni(context)
   if g:acp_behaviorCssOmniPropertyLength >= 0 &&
-        \ a:context =~ '[^ \t:]\k\{' .
+        \ a:context =~ '\(^\s\|[;{]\)\s*\k\{' .
         \              g:acp_behaviorCssOmniPropertyLength . ',}$'
     return 1
   endif
