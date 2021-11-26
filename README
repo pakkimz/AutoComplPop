@@ -100,4 +100,6 @@ call s:defineOption('g:acp_behaviorKeywordCommand', "\<C-p>")
 - change in acp#meetsForPhpOmni(context)
 - add jst file
 
+- disable autocomplete for all buffers:
+call s:defineOption('g:acp_completeOption', '.')
 ==============================================================================
